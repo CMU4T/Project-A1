@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background color */
+    color: #ffffff; /* Light text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh;
+}
+
+.login-container {
+    padding: 20px;
+}
+
+.login-box {
+    background-color: #272727; /* Dark background color */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Light shadow color */
+    width: 100%; /* Ensure it takes full width */
+    max-width: 300px; /* Limit the width */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 20px); /* Adjusting width to include padding */
+    padding: 10px;
+    border: 1px solid #ffffff; /* Light border color */
+    border-radius: 3px;
+    background-color: #3a3a3a; /* Dark background color */
+    color: #ffffff; /* Light text color */
+}
+
+input[type="email"] {
+    margin-right: 0; /* Remove margin from email input */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff; /* Accent color */
+    color: #ffffff; /* Light text color */
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker accent color on hover */
+}
+
+.create-account-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.create-account-link a {
+    color: #33ff00; /* Light text color */
+    text-decoration: none; /* Remove underline */
+}
+
+.create-account-link a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
