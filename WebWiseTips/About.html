@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Tricky Trips</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #121212;
+            height: 100vh; /* Ensure the body takes full viewport height */
+            margin: 0; /* Remove default margin */
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 1fr; /* Equal row heights */
+            gap: 5px;
+            justify-items: center;
+            align-items: center;
+        }
+        .content {
+            padding: 20px;
+            background-color: #272727;
+            border: 1px solid gray;
+            box-shadow: rgba(255, 255, 255, 0.43) 10px 7px 10px 0px;
+            text-align: center;
+            color: white;
+            letter-spacing: 1px;
+            word-spacing: 3px;
+            font-size: 20px;
+            width: 100%;
+            width: 500px;
+            height: 400px;
+        }
+        #FirstH1
+        {
+            text-transform: capitalize;
+            font-size: 25px;
+            border-width: 1000px;
+        }
+        #FirstP1
+        {
+            margin-top: 200px;
+            text-transform: capitalize;
+        }
+        #Navbar1 {
+    width: 100%;
+    padding: 20px 0; /* Adjust vertical padding for better spacing */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none; /* Transparent background */
+    position: fixed; /* Fix navbar at the top */
+    top: 0; /* Ensure it sticks to the top */
+    left: 0; /* Align to the left edge of the viewport */
+    z-index: 1000; /* Ensure it stays above other content */
+        }
+        #Navbar1 a {
+            margin: 0 30px;
+            color: white;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+        #P11
+        {
+            margin-bottom: 70px;
+            box-shadow: cyan 10px 7px 10px 0px;
+        }
+        #htmldiv, #cssdiv {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            margin-top: 100px;
+            font-size: 80px;
+            height: 20px;
+            margin-bottom: 70px;
+        }
+        #htmldiv {
+            color: orange;
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+        }
+        #cssdiv {
+            color: cyan;
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+        }
+        #fh1div
+        {
+            height: 70px;
+            width: 350px;
+            margin-top: 50px;
+            box-shadow: orange 10px 7px 10px 0px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="Navbar1">
+        <a href="Home.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Services.html">Services</a>
+        <a href="Feedback.html">Feedback</a>
+        <a href="Support.html">Support</a>
+    </nav>
+
+    <div class="content" id="fh1div">
+        <h1 id="FirstH1">about</h1>
+    </div>
+    <div class="content" id="P11">
+        <p1 id="FirstP1">Anyone can learn code and make a website in as little as 2 weeks, but what makes one website better than the other? organizing the code! whats the point of your code if it is very messy and unorganized, therefor I aim to improve the life of any coder by keeping a list of all things you can do while coding to keep your code clean and organized while still having it work correcly!</p1>
+    </div>
+    <div id="htmldiv">
+        HTML
+    </div>
+    <div id="cssdiv">
+        CSS
+    </div>
+</body>
+</html>

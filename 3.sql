@@ -6,11 +6,11 @@ CREATE TABLE Hunt(
     );
 
 
-INSERT INTO Hunt VALUES('Furry', 7, 'Common', 24)
+INSERT INTO Hunt VALUES('Furry', 7, 'Disease', 24)
 
-INSERT INTO Hunt VALUES('FemBoy', 10, 'Rare', 56)
+INSERT INTO Hunt VALUES('FemBoy', 10, 'Mythic', 56)
 
-INSERT INTO Hunt VALUES('Egirl', 2, 'Very Common', 58)
+INSERT INTO Hunt VALUES('Egirl', 2, 'deceased', 58)
 
 INSERT INTO Hunt(Creature_type, Danger_level) VALUES('test', 5)
 

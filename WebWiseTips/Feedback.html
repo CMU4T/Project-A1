@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Tricky Trips</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+            body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color:  #121212;
+            height: 100vh; /* Ensure the body takes full viewport height */
+            margin: 0; /* Remove default margin */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .content {
+            padding: 20px;
+            background-color: #272727;
+            border: 1px solid gray;
+            box-shadow: rgba(255, 255, 255, 0.43) 10px 7px 10px 0px;;
+            text-align: center;
+            color: white;
+            width: 800px;
+        }
+        #FirstH1
+        {
+            text-transform: capitalize;
+        }
+        #FirstP1
+        {
+            margin-top: 200px;
+            text-transform: capitalize;
+        }
+        #Feedback1
+        {
+            padding: 20px;
+            background-color: #272727;
+            border: 1px solid gray;
+            box-shadow: rgba(255, 255, 255, 0.43) 10px 7px 10px 0px;;
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            height: 200px;
+            width: 700px;
+            min-height: 100px;
+            overflow: auto;
+        }
+        #fbbutton
+        {
+            margin-top: 40px;
+            width: 100px;
+            height: 50px;
+            min-width: 100px;
+            min-height: 50px;
+            color: green;
+            background-color: #272727;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            box-shadow: rgb(9, 255, 0) 5px 3px 5px 0px;
+        }
+        #fbbutton:active
+        {
+            margin-top: 40px;
+            width: 100px;
+            height: 50px;
+            min-width: 100px;
+            min-height: 50px;
+            color: rgb(0, 255, 0);
+            background-color: #272727;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            text-shadow: 0 0 5px rgba(43, 255, 0, 0.7);
+        }
+        #fbbutton:focus
+        {
+            outline: none;
+        }
+        #Navbar1 {
+    width: 100%;
+    padding: 20px 0; /* Adjust vertical padding for better spacing */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none; /* Transparent background */
+    position: fixed; /* Fix navbar at the top */
+    top: 0; /* Ensure it sticks to the top */
+    left: 0; /* Align to the left edge of the viewport */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+        #Navbar1 a {
+            margin: 0 30px;
+            color: white;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="Navbar1">
+        <a href="Home.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Services.html">Services</a>
+        <a href="Feedback.html">Feedback</a>
+        <a href="Support.html">Support</a>
+    </nav>
+
+    <div class="content">
+        <h1 id="FirstH1">Your FeedBack Helps Us!</h1>
+        <p1 id="FirstP1">If there are any errors or mistakes in the website please notify us, if there are more advices you think can be put onto our website please let us know!</p1>
+    </div>
+    <div id="Feedback1" contenteditable="true">Write Your Feedback Here!</div>
+    <button id="fbbutton">Submit</button>
+    <script>
+        document.getElementById('fbbutton').addEventListener('click', function() {
+            var feedbackContent = document.getElementById('Feedback1').innerText;
+            console.log("Feedback submitted:", feedbackContent);
+            document.getElementById('Feedback1').innerText = 'Thank you for your feedback!';
+        });
+    </script>
+</body>
+</html>

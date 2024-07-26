@@ -46,6 +46,11 @@ p {
 .navbar a {
     color: #ffffff;
     text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+.navbar a:hover
+{
+    color: lime;
 }
 
 .more-content {
@@ -58,13 +63,15 @@ p {
 
 .option {
     flex: 1;
-    margin-right: 20px; /* Decrease the margin-right value */
+    margin-right: 20px;
     margin-bottom: 40px;
     padding: 20px;
     background-color: #333333;
     border-radius: 5px;
     overflow: hidden;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgba(0, 119, 255, 0) 0px 4px 6px -1px, rgb(252, 252, 252) 0px 1px 0px inset;
 }
+
 
 .option h2,
 .option p {
@@ -85,7 +92,7 @@ p {
     max-width: 1000px; /* Maintain the max-width of the container */
     margin: 0 auto;
     box-sizing: border-box;
-}
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgba(0, 119, 255, 0) 0px 4px 6px -1px, rgb(252, 252, 252) 0px 1px 0px inset;}
 
 form {
     width: 100%;
@@ -96,16 +103,15 @@ label {
     margin-bottom: 10px;
 }
 
-/* Adjust input fields to be in four rows with three lines for the first three rows and one line for the last row */
+/* Adjust input fields to be in three rows with three columns each */
 .input-row {
     display: flex;
     margin-bottom: 20px;
 }
 
-.input-row input,
-.input-row select {
+.input-row input {
     flex: 1; /* Each field expands to fill the available space */
-    height: 40px; /* Increased height of input fields */
+    height: 40px; /* Set the height of input fields */
     padding: 10px; /* Added padding for better appearance */
     margin-right: 10px; /* Added margin between input fields */
     margin-bottom: 10px; /* Added margin below input fields */
@@ -115,11 +121,9 @@ label {
 }
 
 /* Remove margin from the last input field to prevent extra space */
-.input-row input:last-child,
-.input-row select {
+.input-row input:last-child {
     margin-right: 0;
 }
-
 
 button {
     width: 100%;
@@ -139,6 +143,26 @@ button:hover {
 .footer {
     text-align: center;
     width: 100%;
-    padding: 20px 0;
+    padding: 35px 0;
     background-color: transparent; /* Remove the gray background */
+}
+.input-row input,
+/* Style the select element */
+.input-row select {
+    flex: 1; /* Each field expands to fill the available space */
+    height: 40px; /* Set the height of the select element */
+    padding: 10px; /* Added padding for better appearance */
+    margin-bottom: 10px; /* Added margin below input fields */
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2); /* Dark themed select field */
+    color: #ffffff;
+    box-sizing: border-box;
+    text-align-last: center; /* Align text to the center */
+    background: #333333;
+    border-color: white;
+}
+
+/* Remove margin from the last input field to prevent extra space */
+.input-row select {
+    margin-right: 0;
 }
