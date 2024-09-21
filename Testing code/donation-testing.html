@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donations</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: linear-gradient(135deg, #1f1f7a, #000066);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .content {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 20px;
+            text-align: center;
+            width: 90%;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        #content1
+        {
+            max-width: 1000px;
+        }
+        #content2
+        {
+            max-height: 1000px;
+            max-width: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #CMU4TPIC
+        {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            border: rgb(0, 255, 255) 5px solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(CMU4T-LOGO4.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            text-transform: capitalize;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+        p {
+            text-transform: capitalize;
+            margin: 10px 0;
+        }
+        #Button1 {
+            color: #fff;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.5s, transform 0.3s;
+            font-size: 15px;
+        }
+        #Button2
+        {
+            color: #fff;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.5s, transform 0.3s;
+            font-size: 15px;
+        }
+        #Button1:hover {
+            background-color: #ff9900;
+            transform: scale(1.05);
+        }
+        #Button1:focus {
+            outline: none;
+        }
+        #Button2:hover {
+            background-color: #ff9900;
+            transform: scale(1.05);
+        }
+        #Button2:focus {
+            outline: none;
+        }
+        #md1 {
+            color: white;
+            word-spacing: 15px;
+            padding: 5px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            font-size: 20px;
+            display: flex;
+            justify-content: left;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border-bottom: 2px solid #ffcc00;
+        }
+        #md1 a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            margin: 0 5px;
+        }
+        #CTTID {
+            text-decoration: none;
+            color: #ffcc00;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        #thespeech, #dwarning
+        {
+            text-transform: capitalize;
+        }
+        #dwarning
+        {
+            color: red;
+        }
+        #speech2
+        {
+            text-transform: capitalize;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        #wordnever
+        {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="md1">
+        <a id="CTTID" href="ctt.html">CTT</a>
+        <a href="#" id="openModal">Theme</a>
+        <a href="Donations.html">Donations</a>
+        <a href="#">About</a>
+        <a href="#">Achievements</a>
+    </div>
+    <div class="content" id="content2">
+        <div id="CMU4TPIC"></div>
+        <p id="speech2">Starting At Simple HTHML All the way to abstract CSS, wait CSS you say?? why not java script or even java? Well... CSS can be a challenge too? just because it can be easy doesnt mean it cant be hard, why dont you Check out my channel and possibly discover the wonders CSS Hides, Because Remember - It Can be easy or it can be hard but it can <span id="wordnever">never</span> be impossible</p>
+        <a href="http://www.youtube.com/@CMU4T"><button id="Button2">Check Me Out!</button></a>
+    </div>
+    <div class="content" id="content1">
+        <h1>Support Me in many ways!</h1>
+        <p id="thespeech">When Coding, Wether It's HTML, CSS, JavaScript Or Even Java There is no such thing as "impossible" you either dont know what you are doing or you are just simply lost, and that is why i thrive to make sure that there is no anlge or corner left in coding that i dont go over to make sure that whatever it is and no matter how hard it is, I Will simply beat it!</p>
+        <p id="dwarning">Supporting is completely optional and does not affect whether you get the full content or not</p>
+        <button id="Button1">Donating Is Currently Unavailable!</button>
+    </div>
+</body>
+</html>

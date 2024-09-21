@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTT</title>
+    <style>
+        body {
+            background: rgb(0, 0, 0);
+            margin: 0;
+            padding: 0;
+            height: 2000px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+        #Lock1 {
+            color: red;
+            border: 1px solid red;
+            font-size: 35px;
+            position: fixed;
+            width: 700px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 350px;
+            padding: 20px;
+            background-color: black;
+            box-shadow: 8px 5px 5px red;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+        }
+        #user:focus, #pass:focus
+        {
+            border: 1px solid red;
+            outline: none;
+        }
+        #user,
+        #pass,
+        button {
+            color: red;
+            background-color: black;
+            border: 1px solid red;
+            padding: 10px;
+            margin: 20px;
+            width: 80%;
+            text-align: center;
+        }
+
+        button {
+            cursor: pointer;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="Lock1">
+        <div id="user" contenteditable="true" onfocus="clearHint(this)" onblur="setHint(this, 'Enter User')">Enter User</div>
+        <div id="pass" contenteditable="true" onfocus="clearHint(this)" onblur="setHint(this, 'Enter Pass')">Enter Pass</div>
+        <button>Submit</button>
+    </div>
+
+    <script>
+        function clearHint(div) {
+            if (div.innerText === 'Enter User' || div.innerText === 'Enter Pass') {
+                div.innerText = '';
+            }
+        }
+
+        function setHint(div, hint) {
+            if (div.innerText.trim() === '') {
+                div.innerText = hint;
+            }
+        }
+    </script>
+</body>
+</html>

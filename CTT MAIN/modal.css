@@ -1,0 +1,48 @@
+/* Modal background overlay */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* On top of other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    backdrop-filter: blur(5px); /* Optional: blur background */
+}
+
+/* Modal content box */
+.modal-content {
+    color: black;
+    background: url(pexels-anniroenkae-2832382.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 15% auto; /* Center the modal */
+    width: 100%; /* Modal width */
+    max-width: 500px; /* Maximum width */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center text */
+    padding: 20px;
+    border: 2px solid orange;
+    position: relative;
+}
+
+/* Close button */
+.close {
+    color: #aaa; /* Default color */
+    font-size: 28px; /* Font size */
+    font-weight: bold; /* Bold font */
+    position: flex;
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Color on hover/focus */
+    text-decoration: none; /* No underline */
+    cursor: pointer; /* Pointer cursor */
+}
+#mc1, #mc2
+{
+    color: orange;
+}

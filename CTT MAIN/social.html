@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donations</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="modal.css"> <!-- Include modal styles -->
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: url(pexels-ian-panelo-8858714.jpg);
+            background-repeat: no-repeat;
+            background-size: 1550px 780px;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 20px;
+            border: yellow 2px solid;
+            text-align: center;
+            width: 90%;
+            font-size: 20px;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        #content1 {
+            max-width: 1000px;
+        }
+        #content2 {
+            max-height: 1000px;
+            max-width: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #CMU4TPIC {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            border: rgb(221, 255, 0) 5px solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(06fe2fdf56434c77ab1526c57ad55a24-free.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            text-transform: capitalize;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+        p {
+            text-transform: capitalize;
+            margin: 10px 0;
+        }
+        #Button1 {
+            color: #fff;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.5s, transform 0.3s;
+            font-size: 15px;
+        }
+        #Button2 {
+            color: #fff;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.5s, transform 0.3s;
+            font-size: 15px;
+        }
+        #Button1:hover {
+            background-color: #ff9900;
+        }
+        #Button1:focus {
+            outline: none;
+        }
+        #Button2:hover {
+            background-color: #ff9900;
+        }
+        #Button2:focus {
+            outline: none;
+        }
+        #md1 {
+            color: white;
+            word-spacing: 15px;
+            padding: 0px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            font-size: 20px;
+            display: flex;
+            justify-content: left;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border-bottom: 2px solid #ffcc00;
+        }
+        #md1 a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            margin: 0 5px;
+        }
+        #CTTID {
+            text-decoration: none;
+            color: #ffcc00;
+            padding: 15px 10px;
+            border-radius: 5px;
+        }
+        #thespeech, #dwarning {
+            text-transform: capitalize;
+        }
+        #dwarning {
+            color: yellow;
+        }
+        #speech2 {
+            text-transform: capitalize;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        #wordnever {
+            color: lime;
+        }
+        #discord {
+            background: linear-gradient(90deg, cyan, blue, cyan);
+            background-size: 400% 100%;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+            background-clip: text;
+            animation: ytdc 7s linear infinite;
+        }
+        #youtube {
+            background: linear-gradient(90deg, red, white, red);
+            background-size: 400% 100%;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+            background-clip: text;
+            animation: ytdc 7s linear infinite;
+        }
+        @keyframes ytdc {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: -400%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="md1">
+        <a id="CTTID" href="ctt.html">CTT</a>
+        <a href="#" id="openModal">Achievements</a>
+        <a href="social.html">Social</a>
+        <a href="about.html">About</a>
+        <a href="news.html">News</a>
+        <a href="partners.html">Partners</a>
+    </div>
+    <div class="content" id="content2">
+        <div id="CMU4TPIC"></div>
+        <p id="speech2">Starting At Simple HTHML All the way to abstract CSS, wait CSS you say?? why not java script or even java? Well... CSS can be a challenge too? just because it can be easy doesnt mean it cant be hard, why dont you Check out my channel on <span id="youtube">Youtube</span> and possibly discover the wonders CSS Hides alongside with other coding languages, Because Remember - It Can be easy or it can be hard but it can <span id="wordnever">never</span> be impossible</p>
+        <a href="http://www.youtube.com/@CMU4T"><button id="Button2">Youtube Channel</button></a>
+    </div>
+    <div class="content" id="content1">
+        <h1>Come Join Us!</h1>
+        <p id="thespeech">When Coding, Wether It's HTML, CSS, JavaScript Or Even Java There is no such thing as "impossible" you either dont know what you are doing or you are just simply lost, and that is why i thrive to make sure that there is no anlge or corner left in coding that i dont go over to make sure that whatever it is and no matter how hard it is, I Will simply beat it By Creating a community a strong community forged with knowlegde in order to demolish all obstacles in the path of success</p>
+        <p id="dwarning">Feel Free To Join Our <span id="discord">Discord</span> By Pressing The Button Below</p>
+        <a href="https://discord.gg/bX2gzJJPSw"><button id="Button1">Discord Server</button></a>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body">Loading...</div> <!-- Placeholder for modal content -->
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("modal");
+        var btn = document.getElementById("openModal");
+        var span = document.getElementsByClassName("close")[0];
+        var modalBody = document.getElementById("modal-body");
+
+        btn.onclick = function () {
+            fetch('ach.html')
+                .then(response => response.text())
+                .then(data => {
+                    modalBody.innerHTML = data; // Load the content from ach.html
+                    modal.style.display = "block";
+                })
+                .catch(error => {
+                    modalBody.innerHTML = "<p>Failed to load content.</p>";
+                });
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        window.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

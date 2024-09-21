@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numbered Text Boxes</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: black;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 80%;
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 30px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      background-color: transparent;
+      border: none;
+      color: inherit;
+      text-align: center;
+      font-size: 25px;
+    }
+
+    td.red-cell {
+      color: rgb(0, 255, 26);
+    }
+
+    td.white-cell {
+      color: white;
+    }
+
+    .button {
+      width: 150px;
+      height: 50px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      border: none;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 25px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      background-image: linear-gradient(to right, #4CAF50, #2E8B57);
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      user-select: none; /* Added to prevent text selection */
+    }
+
+    .button:hover {
+      background-image: linear-gradient(to right, #45a049, #2E8B57);
+      color: green; /* Text color turns green on hover */
+    }
+
+    .yellow-button {
+      background-image: linear-gradient(to right, #FFFF00, #FFD700);
+    }
+
+    .red-button {
+      background-image: linear-gradient(to right, #FF0000, #8B0000);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>f"</th>
+          <th>f'</th>
+          <th>f</th>
+          <th>مقارنة</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="red-cell"><input type="text" value="X"></td>
+          <td><input type="text" value="2"></td>
+          <td><input type="text" value="3"></td>
+          <td><input type="text" value="4"></td>
+        </tr>
+        <tr>
+          <td class="red-cell"><input type="text" value="X"></td>
+          <td><input type="text" value="6"></td>
+          <td><input type="text" value="7"></td>
+          <td><input type="text" value="8"></td>
+        </tr>
+        <tr>
+          <td class="red-cell"><input type="text" value="X"></td>
+          <td><input type="text" value="10"></td>
+          <td><input type="text" value="11"></td>
+          <td><input type="text" value="12"></td>
+        </tr>
+        <tr>
+          <td class="white-cell red-cell"><input type="text" value="X"></td>
+          <td><input type="text" value="14"></td>
+          <td><input type="text" value="15"></td>
+          <td><input type="text" value="16"></td>
+        </tr>
+        <tr>
+          <td><input type="text" value="17"></td>
+          <td><input type="text" value="18"></td>
+          <td><input type="text" value="19"></td>
+          <td><input type="text" value="20"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

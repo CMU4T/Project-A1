@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTT</title>
+    <style>
+        body {
+            background: white;
+            margin: 0;
+            padding: 0;
+            height: 2000px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .yellow-line {
+            width: 1000px; /* Adjust width as needed */
+            height: 2px;
+            background-color: #ffcc00;
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #md1 a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            margin: 0 5px;
+        }
+
+        #CTTID {
+            text-decoration: none;
+            color: rgb(255, 0, 0);
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #sd1 {
+            text-align: left;
+            height: 150px;
+            max-height: 150px;
+            width: 400px;
+            max-width: 400px;
+            font-size: 40px;
+            text-transform: capitalize;
+            position: absolute;
+            left: 150px;
+            top: 30%;
+            transform: translateY(-50%);
+            color: white;
+        }
+
+        .cloud {
+            position: absolute;
+            width: 200px;
+            height: 120px;
+            background: #fff;
+            border-radius: 100px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            overflow: hidden;
+        }
+
+        .cloud .letter {
+            display: inline-block;
+            animation: colorTransition 4s linear infinite;
+            color: white;
+        }
+
+        .cloud.html .letter {
+            animation: colorTransition 4s linear infinite;
+            display: inline-block;
+        }
+
+        .cloud.css .letter {
+            animation: colorTransition2 4s linear infinite;
+        }
+
+        .cloud.js .letter {
+            animation: colorTransition3 4s linear infinite;
+        }
+
+        @keyframes colorTransition {
+            0% { color: white; }
+            50% { color: orange; }
+            100% { color: white; }
+        }
+
+        @keyframes colorTransition2 {
+            0% { color: white; }
+            50% { color: rgb(17, 0, 255); }
+            100% { color: white; }
+        }
+
+        @keyframes colorTransition3 {
+            0% { color: white; }
+            50% { color: rgb(255, 0, 0); }
+            100% { color: white; }
+        }
+
+        #Button2:focus {
+            outline: none;
+        }
+
+        #cloud1 {
+            top: 15%;
+            right: 200px;
+        }
+
+        #cloud2 {
+            top: 40%;
+            right: 400px;
+            color: white;
+        }
+
+        #cloud3 {
+            top: 55%;
+            right: 100px;
+            color: white;
+        }
+
+        #b1 {
+            position: relative;
+            margin-top: 200px;
+            margin-right: 1010px;
+            width: 200px;
+            font-size: 25px;
+            height: 50px;
+            color: #fff;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.5s, transform 0.3s;
+        }
+
+        #b1d {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #b1:hover {
+            background-color: #ff9900;
+        
+        }
+
+        #b1:focus {
+            outline: none;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .cloud .letter:nth-child(1) { animation-delay: 0s; }
+        .cloud .letter:nth-child(2) { animation-delay: 0.5s; }
+        .cloud .letter:nth-child(3) { animation-delay: 1s; }
+        .cloud .letter:nth-child(4) { animation-delay: 1.5s; }
+
+        .circle-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 50px auto;
+        }
+
+        .label {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: white;
+        }
+
+        #md2 {
+            background: #000066;
+            height: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #md4 {
+            background: #000066;
+            height: 700px;
+            margin-top: -50px;
+            display: flex;
+            justify-content: flex-start;
+            position: relative;
+        }
+
+        #md3 {
+            color: white;
+            border: 1px solid yellow;
+            font-size: 25px;
+            text-transform: capitalize;
+            position: absolute; /* Keeps it positioned relative to the nearest positioned ancestor (#md4) */
+            width: 700px; /* Ensures the box width is fixed */
+            top: 50%; /* Centers vertically */
+            right: 0; /* Aligns to the right */
+            transform: translate(0, -50%); /* Adjusts for perfect vertical centering */
+            margin-left: 900px;
+            margin-right: 100px;
+            height: 500px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 20px;
+            text-align: center;
+        }
+
+        #div1 {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            height: 100vh;
+        }
+
+        .snapping {
+            scroll-snap-align: start;
+            height: 100vh;
+        }
+
+        #md2, #md4 {
+            scroll-snap-align: start;
+        }
+
+        #navbar {
+            background-color: #000033db; /* Solid dark blue base color */
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+            margin: 0;
+            border: none;
+            display: flex;
+            box-sizing: border-box;
+            width: 100%;
+            height: 52px;
+            bottom: 5.3px;
+            position: relative;
+            border-bottom: 2px solid #ffcc00;
+            align-items: center;
+        }
+
+        #md1 {
+            background-color: #000066; /* Solid dark blue base color */
+            word-spacing: 15px;
+            padding: 5px 0;
+            font-size: 20px;
+            display: flex;
+            justify-content: left;
+            position: relative;
+            width: 100%;
+            border-bottom: 2px solid #ffcc00;
+            height: 700px;
+        }
+
+        #chart1 {
+            background-color: transparent;
+            height: 100%;         
+            width: 100%; /* Ensures the box width is fixed */
+        }
+        #chart
+        {
+            color: white;
+            border: 1px solid yellow;
+            font-size: 30px;
+            text-transform: capitalize;
+            width: 500px; /* Ensures the box width is fixed */
+            height: 500px; /* Ensures the box height is fixed */
+            padding: 20px;
+            margin-top: 81px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 20px;
+            text-align: center;
+            margin-left: 100px; /* Adds space from the left edge */
+        }
+
+        #s2s1
+        {
+            color: orange;
+            font: bold;
+        }
+        #feed-error
+        {
+            color: #fff;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            padding: 20px 40px;
+            cursor: pointer;
+            transition: background-color 0.5s, box-shadow 0.5s, transform 3s;
+            box-shadow: 0px 0px 15px 0px yellow;
+            font-size: 25px;
+            margin-top: 42px;
+        }
+
+        #feed-error:hover {
+            background-color: #ff9900;
+            box-shadow: 0px 0px 15px 0px orange;
+        }
+        #feed-error:focus {
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>This is the modal content</p>
+        </div>
+    </div>
+
+    <div id="div1">
+        <section id="md1" class="snapping">
+            <div id="navbar">
+                <a id="CTTID" href="ctt.html">CTT</a>
+                <a href="#" id="openModal">Achievements</a>
+                <a href="Donations.html">Donations</a>
+                <a>About</a>
+                <a>FeedBack</a>
+            </div>
+
+            <div id="sd1">Did you know that 46% of consumers prefer blue as the main color for a website?</div>
+            <div id="b1d"><button id="b1">Join the Fun!</button></div>
+
+            <div class="cloud html" id="cloud1">
+                <span class="letter">H</span>
+                <span class="letter">T</span>
+                <span class="letter">M</span>
+                <span class="letter">L</span>
+            </div>
+            <div class="cloud css" id="cloud2">
+                <span class="letter">C</span>
+                <span class="letter">S</span>
+                <span class="letter">S</span>
+            </div>
+            <div class="cloud js" id="cloud3">
+                <span class="letter">J</span>
+                <span class="letter">S</span>
+            </div>
+            <div class="yellow-line"></div>
+        </section>
+
+        <section id="md4" class="snapping">
+            <div id="chart">
+                <canvas id="chart1" width="600" height="600"></canvas>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+            <script src="chart1.js"></script>
+            <script src="chart2.js"></script>
+            <div id="md3">
+                <h1 id="md3h11">Coding Languages You Will Find Here</h1>
+                <p id="md3p1">In this website you will fiend a variety of options for coding languages and this includes <span id="s2s1">HTML, CSS, JavaScript, Java, Ruby, PHP, Bash, C, C#, C++, Python And SQL.</span> The Following Chart Shows How Many Tricky Tricks Have Been uploaded regarding each language, If you find any errors or possible suggestions please make sure to submit them in order to help me advance my website for the better</p>
+                <button id="feed-error">Submit A Form</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        var modal = document.getElementById("modal");
+        var btn = document.getElementById("openModal");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

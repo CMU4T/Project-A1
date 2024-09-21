@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stopwatch</title>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #000000; /* Black background */
+        color: #ffffff; /* White text */
+    }
+    #stopwatch {
+        font-size: 3em;
+        color: #09ff00; /* Red color */
+        margin-bottom: 20px;
+    }
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .button {
+        padding: 10px 20px;
+        font-size: 1.5em;
+        background-color: #000000;
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+        margin: 0 5px;
+    }
+    .button:hover
+    {
+        color: rgb(0, 255, 0);
+    }
+</style>
+</head>
+<body>
+
+<div id="stopwatch">00:00:00</div>
+
+<div class="button-container">
+    <button class="button" id="startBtn" onclick="startTimer()">Start</button>
+    <button class="button" id="stopBtn" onclick="stopTimer()" disabled>Stop</button>
+    <button class="button" onclick="resetTimer()">Reset</button>
+</div>
+
+<script>
+    var startTime;
+    var timerInterval;
+    var elapsedTime = 0;
+
+    function startTimer() {
+        startTime = Date.now() - elapsedTime;
+        timerInterval = setInterval(updateTimer, 1000);
+        document.getElementById("startBtn").disabled = true;
+        document.getElementById("stopBtn").disabled = false;
+    }
+
+    function stopTimer() {
+        clearInterval(timerInterval);
+        elapsedTime = Date.now() - startTime;
+        document.getElementById("startBtn").disabled = false;
+        document.getElementById("stopBtn").disabled = true;
+    }
+
+    function resetTimer() {
+        clearInterval(timerInterval);
+        document.getElementById("stopwatch").innerText = "00:00:00";
+        elapsedTime = 0;
+        document.getElementById("startBtn").disabled = false;
+        document.getElementById("stopBtn").disabled = true;
+    }
+
+    function updateTimer() {
+        var currentTime = Date.now();
+        var elapsedTime = currentTime - startTime;
+        var hours = Math.floor(elapsedTime / (1000 * 60 * 60));
+        var minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
+
+        hours = (hours < 10) ? "0" + hours : hours;
+        minutes = (minutes < 10) ? "0" + minutes : minutes;
+        seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+        document.getElementById("stopwatch").innerText = hours + ":" + minutes + ":" + seconds;
+    }
+</script>
+
+</body>
+</html>
